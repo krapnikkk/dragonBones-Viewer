@@ -177,7 +177,7 @@
         var base64;
         var img = document.createElement('img');
         var loadimg = new Image();
-        loadimg.src = path + '_ske_tex.png';
+        loadimg.src = path + '_tex.png';
         loadimg.onload = function () {
             var canvas = document.createElement("canvas");
             var ctx = canvas.getContext("2d");
@@ -196,11 +196,11 @@
     }
 
     function loadRes(path) {
-        fetch(path + "_ske_ske.json").then(function (res) {
+        fetch(path + "_ske.json").then(function (res) {
             return res.json()
         }).then(function (value) {
             dbData[0].data = value;
-            fetch(path + "_ske_tex.json").then(function (res) {
+            fetch(path + "_tex.json").then(function (res) {
                 return res.json()
             }).then(function (value) {
                 dbData[0].textureAtlasDatas.push(value);
